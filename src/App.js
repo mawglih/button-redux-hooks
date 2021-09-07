@@ -13,8 +13,17 @@ function App() {
   }
   return (
     <div className="App">
-      <Button handleClick={e => handleClick(e)}/>
-      <Text text={counters}/>
+      <Button
+        handleClick={e => handleClick(e)}
+        primaryText='Click me'
+        primaryColor='green'
+      />
+      <Text text={counter.value} />
+      <Button
+        handleClick={e => resetCounter(e)}
+        primaryText='Reset counter'
+        primaryColor='violet'
+      />
     </div>
   );
 }
