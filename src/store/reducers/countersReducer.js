@@ -1,5 +1,6 @@
 import {
     INCREMENT_COUNTER,
+    RESET_COUNTER
   } from '../actions/action-types';
   
   const INITIAL_STATE = {
@@ -11,6 +12,10 @@ import {
       case INCREMENT_COUNTER:
         return {
           counters: state.counters + 1
+        };
+      case RESET_COUNTER:
+        return {
+          counters: 0
         };
       default:
         return state;

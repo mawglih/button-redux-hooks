@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { incrementCounter } from './store/actions';
+import { incrementCounter, resetMyCounter } from './store/actions';
 import Text from './text';
 import Button from './button';
 import './App.css';
@@ -7,12 +7,13 @@ import './App.css';
 function App() {
   const dispatch = useDispatch();
   const {counters} = useSelector(state => state.counters)
-  const onIncrement = () => dispatch(incrementCounter())
+  const onIncrement = () => dispatch(incrementCounter());
+  const onReset = () => dispatch(resetMyCounter());
   const handleClick = e => {
     onIncrement();
   }
   const resetCounter = e => {
-    
+    onReset();
   }
   return (
     <div className="App">
