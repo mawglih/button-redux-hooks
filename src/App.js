@@ -11,6 +11,9 @@ function App() {
   const handleClick = e => {
     onIncrement();
   }
+  const resetCounter = e => {
+    
+  }
   return (
     <div className="App">
       <Button
@@ -18,7 +21,7 @@ function App() {
         primaryText='Click me'
         primaryColor='green'
       />
-      <Text text={counter.value} />
+      <Text text={counters} />
       <Button
         handleClick={e => resetCounter(e)}
         primaryText='Reset counter'
